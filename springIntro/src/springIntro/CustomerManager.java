@@ -1,16 +1,22 @@
 package springIntro;
 
-public class CustomerManager {
-
+public class CustomerManager implements ICustomerService {
+	
 	private ICustomerDal customerDal;
 	
-	public CustomerManager(ICustomerDal customerDal) {
+	//constructor injection (sektör bunu daha çok kullanýyor)
+	//public CustomerManager(ICustomerDal customerDal) {
+		//this.customerDal = customerDal;
+	//}
+
+	
+	//setter injection
+	public void setCustomerDal(ICustomerDal customerDal) {
 		this.customerDal = customerDal;
 	}
-	
+
 	public void add() {
 		// is kurallari
-		
 		customerDal.add();
 	}
 	

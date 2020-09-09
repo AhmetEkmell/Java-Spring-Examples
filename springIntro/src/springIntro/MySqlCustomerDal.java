@@ -1,6 +1,6 @@
 package springIntro;
 
-public class CustomerDal implements ICustomerDal {
+public class MySqlCustomerDal implements ICustomerDal {
 	
 	String connectionString;
 	
@@ -11,10 +11,12 @@ public class CustomerDal implements ICustomerDal {
 	public void setConnectionString(String connectionString) {
 		this.connectionString = connectionString;
 	}
-
+	
+	@Override
 	public void add() {
 		System.out.println("Connection String: "+this.connectionString);
-		System.out.println("Oracle veritabanýna eklendi.");
+		System.out.println("mysql veritabaný eklendi");
+		
 	}
 
 }
